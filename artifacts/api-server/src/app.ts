@@ -1,6 +1,6 @@
 import express, { type Express } from "express";
 import cors from "cors";
-import pinoHttp from "pino-http";
+import pinoHttp, { type HttpLogger } from "pino-http";
 import path from "path";
 import { fileURLToPath } from "url";
 import router from "./routes";
@@ -12,17 +12,17 @@ const currentDir = path.dirname(fileURLToPath(import.meta.url));
 const isProduction = process.env.NODE_ENV === "production";
 
 app.use(
-  pinoHttp({
+  (pinoHttp as unknown as (opts: object) => HttpLogger)({
     logger,
     serializers: {
-      req(req) {
+      req(req: { id: string; method: string; url?: string }) {
         return {
           id: req.id,
           method: req.method,
           url: req.url?.split("?")[0],
         };
       },
-      res(res) {
+      res(res: { statusCode: number }) {
         return {
           statusCode: res.statusCode,
         };
