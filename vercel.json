@@ -1,15 +1,12 @@
 {
   "buildCommand": "pnpm install && pnpm -w run deploy:build",
-  "outputDirectory": "artifacts/api-server/dist",
   "functions": {
-    "vercel.mjs": {
+    "api/index.js": {
+      "includeFiles": "artifacts/api-server/dist/**",
       "maxDuration": 30
     }
   },
   "rewrites": [
-    { "source": "/(.*)", "destination": "/vercel.mjs" }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+    { "source": "/(.*)", "destination": "/api/index" }
+  ]
 }
