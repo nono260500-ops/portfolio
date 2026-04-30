@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — DEV.PRO</title>
+  <meta name="description" content="Découvrez mes services de développement web : site simple, site vitrine, e-commerce et webapps sur mesure. Tarifs et inclus détaillés." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo"><div class="nav-logo-icon">&gt;_</div>DEV.PRO</a>
+    <div class="nav-links">
+      <a href="/" class="nav-link" data-nav>Accueil</a>
+      <a href="/services/" class="nav-link" data-nav>Services</a>
+      <a href="/#portfolio" class="nav-link">Portfolio</a>
+      <a href="/a-propos/" class="nav-link" data-nav>À propos</a>
+      <a href="/contact/" class="nav-link" data-nav>Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="/contact/" class="nav-cta">Devis gratuit</a>
+      <a href="/admin/" class="nav-admin">🛡 Admin</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle"><span class="toggle-icon">☰</span></button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="/" class="nav-mobile-link">Accueil</a>
+    <a href="/services/" class="nav-mobile-link">Services</a>
+    <a href="/#portfolio" class="nav-mobile-link">Portfolio</a>
+    <a href="/a-propos/" class="nav-mobile-link">À propos</a>
+    <a href="/contact/" class="nav-mobile-link">Contact</a>
+    <a href="/contact/" class="nav-mobile-cta">Demander un devis gratuit</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <span class="label">Services</span>
+    <h1>Des solutions <span class="gradient-text">adaptées à chaque projet</span></h1>
+    <p>Du site web simple à la webapp complexe — je m'adapte à votre budget, vos délais et vos objectifs. Chaque devis est personnalisé et gratuit.</p>
+  </div>
+</section>
+
+<!-- SERVICES DETAIL -->
+<section class="section">
+  <div class="container" style="display:flex;flex-direction:column;gap:3rem">
+
+    <!-- SERVICE 1 -->
+    <div class="service-detail reveal">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem">
+        <div class="card-icon" style="margin-bottom:0">💻</div>
+        <div>
+          <span class="label">Pour les artisans, indépendants, associations</span>
+          <h2 style="font-size:1.6rem;margin-top:.25rem">Site Web Simple (HTML/JS)</h2>
+        </div>
+      </div>
+      <div class="service-detail-grid">
+        <div>
+          <p style="font-size:1rem;line-height:1.8;margin-bottom:1.5rem">Un site statique ultra-rapide, bien référencé et facile à maintenir. Parfait pour une présence en ligne professionnelle sans complexité technique ni coût récurrent excessif.</p>
+          <h3 style="margin-bottom:1rem;font-size:1rem">Ce qui est inclus</h3>
+          <ul class="check-list">
+            <li>Page d'accueil, à propos, contact, mentions légales</li>
+            <li>Design personnalisé selon votre identité visuelle</li>
+            <li>Formulaire de contact (email direct)</li>
+            <li>Intégration Google Maps</li>
+            <li>Responsive (mobile, tablette, desktop)</li>
+            <li>SEO de base : balises, sitemap, robots.txt</li>
+            <li>Hébergement conseillé et configuration DNS</li>
+            <li>Score Lighthouse &gt; 90</li>
+          </ul>
+          <div style="margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap">
+            <a href="/contact/" class="btn btn-primary">Demander un devis</a>
+            <a href="/#portfolio" class="btn btn-outline">Voir des exemples</a>
+          </div>
+        </div>
+        <div class="service-pricing">
+          <div class="service-price-label">À partir de</div>
+          <div class="service-price">299 €</div>
+          <ul style="list-style:none;font-size:.82rem;text-align:left;margin-bottom:1.25rem;display:flex;flex-direction:column;gap:.5rem">
+            <li style="display:flex;gap:.5rem">✓ <span>Livraison en 3–5 jours</span></li>
+            <li style="display:flex;gap:.5rem">✓ <span>Révisions incluses</span></li>
+            <li style="display:flex;gap:.5rem">✓ <span>Code source fourni</span></li>
+            <li style="display:flex;gap:.5rem">✓ <span>Transfert des accès</span></li>
+          </ul>
+          <a href="/contact/" class="btn btn-primary btn-full">Demander un devis</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICE 2 -->
+    <div class="service-detail reveal">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem">
+        <div class="card-icon" style="margin-bottom:0">🌐</div>
+        <div>
+          <span class="label">Pour les PME, artisans, professions libérales</span>
+          <h2 style="font-size:1.6rem;margin-top:.25rem">Site Vitrine Professionnel</h2>
+        </div>
+      </div>
+      <div class="service-detail-grid">
+        <div>
+          <p style="font-size:1rem;line-height:1.8;margin-bottom:1.5rem">Un site multi-pages complet avec design sur mesure, animations soignées et toutes les fonctionnalités attendues d'un site professionnel. Une image qui rassure vos clients et génère des appels entrants.</p>
+          <h3 style="margin-bottom:1rem;font-size:1rem">Ce qui est inclus</h3>
+          <ul class="check-list">
+            <li>Site multi-pages (5 à 10 pages)</li>
+            <li>Design moderne et animations sur scroll</li>
+            <li>Formulaire de contact avancé</li>
+            <li>Galerie photos / portfolio visuel</li>
+            <li>Intégration Google Maps &amp; réseaux sociaux</li>
+            <li>Interface admin simple (sans CMS lourd)</li>
+            <li>Optimisation SEO avancée</li>
+            <li>Hébergement et mise en ligne inclus</li>
+            <li>Formation à la prise en main</li>
+          </ul>
+          <div style="margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap">
+            <a href="/contact/" class="btn btn-primary">Demander un devis</a>
+            <a href="/#portfolio" class="btn btn-outline">Voir des exemples</a>
+          </div>
+        </div>
+        <div class="service-pricing">
+          <div class="service-price-label">À partir de</div>
+          <div class="service-price">799 €</div>
+          <ul style="list-style:none;font-size:.82rem;text-align:left;margin-bottom:1.25rem;display:flex;flex-direction:column;gap:.5rem">
+            <li style="display:flex;gap:.5rem">✓ <span>Livraison en 7–14 jours</span></li>
+            <li style="display:flex;gap:.5rem">✓ <span>Révisions illimitées</span></li>
+            <li style="display:flex;gap:.5rem">✓ <span>1 an de support inclus</span></li>
+            <li style="display:flex;gap:.5rem">✓ <span>Analytics intégrés</span></li>
+          </ul>
+          <a href="/contact/" class="btn btn-primary btn-full">Demander un devis</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICE 3 -->
+    <div class="service-detail reveal">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem">
+        <div class="card-icon" style="margin-bottom:0">🛒</div>
+        <div>
+          <span class="label">Pour les boutiques, créateurs, revendeurs</span>
+          <h2 style="font-size:1.6rem;margin-top:.25rem">E-commerce</h2>
+        </div>
+      </div>
+      <div class="service-detail-grid">
+        <div>
+          <p style="font-size:1rem;line-height:1.8;margin-bottom:1.5rem">Boutique en ligne complète avec paiement sécurisé, gestion des stocks et tableaux de bord. Vendez vos produits ou services 24h/24 sans dépendre d'une plateforme tierce.</p>
+          <h3 style="margin-bottom:1rem;font-size:1rem">Ce qui est inclus</h3>
+          <ul class="check-list">
+            <li>Catalogue produits illimité</li>
+            <li>Paiement sécurisé Stripe (CB, Apple Pay, Google Pay)</li>
+            <li>Option paiement crypto (USDT, BTC, ETH)</li>
+            <li>Paniers, coupons, promotions</li>
+            <li>Espace client et historique commandes</li>
+            <li>Gestion stocks &amp; alertes</li>
+            <li>Dashboard admin complet</li>
+            <li>Emails transactionnels automatiques</li>
+            <li>Responsive &amp; optimisé mobile</li>
+          </ul>
+          <div style="margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap">
+            <a href="/contact/" class="btn btn-primary">Demander un devis</a>
+          </div>
+        </div>
+        <div class="service-pricing">
+          <div class="service-price-label">À partir de</div>
+          <div class="service-price">1 490 €</div>
+          <ul style="list-style:none;font-size:.82rem;text-align:left;margin-bottom:1.25rem;display:flex;flex-direction:column;gap:.5rem">
+            <li style="display:flex;gap:.5rem">✓ <span>Livraison en 2–3 semaines</span></li>
+            <li style="display:flex;gap:.5rem">✓ <span>Paiement multi-devises</span></li>
+            <li style="display:flex;gap:.5rem">✓ <span>Support 3 mois inclus</span></li>
+            <li style="display:flex;gap:.5rem">✓ <span>Formation admin</span></li>
+          </ul>
+          <a href="/contact/" class="btn btn-primary btn-full">Demander un devis</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICE 4 -->
+    <div class="service-detail reveal">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem">
+        <div class="card-icon" style="margin-bottom:0">🔧</div>
+        <div>
+          <span class="label">Pour les entreprises, startups, indépendants ambitieux</span>
+          <h2 style="font-size:1.6rem;margin-top:.25rem">Webapp &amp; Solution Sur Mesure</h2>
+        </div>
+      </div>
+      <div class="service-detail-grid">
+        <div>
+          <p style="font-size:1rem;line-height:1.8;margin-bottom:1.5rem">Outils métier, CRM, suivi GPS, streaming live, chat temps réel, automatisation de processus — je développe exactement ce dont votre activité a besoin. Sur devis selon la complexité.</p>
+          <h3 style="margin-bottom:1rem;font-size:1rem">Exemples de réalisations</h3>
+          <ul class="check-list">
+            <li>CRM et gestion clients sur mesure</li>
+            <li>Application de suivi GPS en temps réel</li>
+            <li>Plateforme de streaming et live vidéo</li>
+            <li>Chat et messagerie instantanée</li>
+            <li>Dashboard et analytics business</li>
+            <li>Intégration API tierces</li>
+            <li>Automatisation de processus internes</li>
+            <li>Paiement crypto et smart contracts</li>
+          </ul>
+          <div style="margin-top:1.5rem">
+            <a href="/contact/" class="btn btn-primary">Discuter de mon projet</a>
+          </div>
+        </div>
+        <div class="service-pricing">
+          <div class="service-price-label">Sur devis</div>
+          <div class="service-price">À partir de 2 500 €</div>
+          <ul style="list-style:none;font-size:.82rem;text-align:left;margin-bottom:1.25rem;display:flex;flex-direction:column;gap:.5rem">
+            <li style="display:flex;gap:.5rem">✓ <span>Analyse gratuite</span></li>
+            <li style="display:flex;gap:.5rem">✓ <span>Cahier des charges offert</span></li>
+            <li style="display:flex;gap:.5rem">✓ <span>Développement agile</span></li>
+            <li style="display:flex;gap:.5rem">✓ <span>Support long terme</span></li>
+          </ul>
+          <a href="/contact/" class="btn btn-primary btn-full">Demander un devis</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label">FAQ</span>
+      <h2>Questions fréquentes</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:1rem;max-width:780px" class="reveal">
+      <div class="card">
+        <h3 style="margin-bottom:.5rem;font-size:1rem">Combien de temps dure un projet ?</h3>
+        <p style="font-size:.875rem">Un site simple : 3–5 jours. Un site vitrine : 1–2 semaines. Un e-commerce : 2–4 semaines. Une webapp complexe : selon la scope, de 3 semaines à plusieurs mois.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:.5rem;font-size:1rem">Comment se passe le paiement ?</h3>
+        <p style="font-size:.875rem">50% à la signature, 50% à la livraison. Pour les grands projets, un découpage en jalons est possible. Virement bancaire ou crypto acceptés.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:.5rem;font-size:1rem">Est-ce que je peux modifier mon site moi-même ?</h3>
+        <p style="font-size:.875rem">Oui — je livre toujours avec une interface d'administration ou une documentation claire pour les modifications courantes. Pas besoin de coder.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:.5rem;font-size:1rem">Que se passe-t-il après la livraison ?</h3>
+        <p style="font-size:.875rem">Je reste disponible pour les corrections et les évolutions. Maintenance, mises à jour et nouvelles fonctionnalités sont toujours possibles sur devis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="text-align:center">
+  <div class="container reveal">
+    <h2 style="margin-bottom:1rem">Vous avez un projet en tête ?</h2>
+    <p style="max-width:480px;margin:0 auto 2rem">Contactez-moi pour un devis gratuit et sans engagement. Je réponds sous 24h.</p>
+    <a href="/contact/" class="btn btn-primary btn-lg">Demander un devis gratuit →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" style="margin-bottom:.75rem;display:inline-flex"><div class="nav-logo-icon">&gt;_</div>DEV.PRO</a>
+        <p>Développeur web full-stack spécialisé en solutions digitales sur mesure.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/#portfolio">Portfolio</a></li>
+          <li><a href="/a-propos/">À propos</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <a href="mailto:contact@exemple.fr" style="display:block;font-size:.85rem;color:#f1f5f9;font-family:var(--font-mono);margin-bottom:.75rem">contact@exemple.fr</a>
+        <a href="/contact/" style="font-size:.85rem;color:var(--primary-light)">Demander un devis gratuit →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 DEV.PRO — Tous droits réservés</span>
+      <span class="footer-status">STATUS: ONLINE</span>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="/assets/main.js"></script>
+</body>
+</html>

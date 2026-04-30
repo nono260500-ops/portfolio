@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Devis — DEV.PRO</title>
+  <meta name="description" content="Demandez un devis gratuit pour votre projet web. Réponse sous 24h ouvrées. Site web, e-commerce, webapp sur mesure." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo"><div class="nav-logo-icon">&gt;_</div>DEV.PRO</a>
+    <div class="nav-links">
+      <a href="/" class="nav-link" data-nav>Accueil</a>
+      <a href="/services/" class="nav-link" data-nav>Services</a>
+      <a href="/#portfolio" class="nav-link">Portfolio</a>
+      <a href="/a-propos/" class="nav-link" data-nav>À propos</a>
+      <a href="/contact/" class="nav-link" data-nav>Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="/contact/" class="nav-cta">Devis gratuit</a>
+      <a href="/admin/" class="nav-admin">🛡 Admin</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle"><span class="toggle-icon">☰</span></button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="/" class="nav-mobile-link">Accueil</a>
+    <a href="/services/" class="nav-mobile-link">Services</a>
+    <a href="/#portfolio" class="nav-mobile-link">Portfolio</a>
+    <a href="/a-propos/" class="nav-mobile-link">À propos</a>
+    <a href="/contact/" class="nav-mobile-link">Contact</a>
+    <a href="/contact/" class="nav-mobile-cta">Demander un devis gratuit</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <span class="label">Contact &amp; Devis</span>
+    <h1>Parlons de <span class="gradient-text">votre projet</span></h1>
+    <p>Remplissez le formulaire ci-dessous pour recevoir un devis personnalisé gratuit et sans engagement. Je vous réponds sous 24h ouvrées.</p>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="grid-2" style="align-items:start;gap:4rem">
+
+      <!-- LEFT: INFO -->
+      <div class="reveal">
+        <h2 style="font-size:1.5rem;margin-bottom:1.5rem">Informations de contact</h2>
+        <div style="display:flex;flex-direction:column;gap:.75rem;margin-bottom:2.5rem">
+          <div class="contact-info-card">
+            <div class="contact-info-icon">✉️</div>
+            <div>
+              <div class="contact-info-label">Email</div>
+              <a href="mailto:contact@exemple.fr" class="contact-info-value" style="display:block">contact@exemple.fr</a>
+              <div class="contact-info-sub">Réponse sous 24h ouvrées</div>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon">🕐</div>
+            <div>
+              <div class="contact-info-label">Disponibilité</div>
+              <div class="contact-info-value">Lundi – Vendredi</div>
+              <div class="contact-info-sub">9h00 – 18h00</div>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon">📍</div>
+            <div>
+              <div class="contact-info-label">Localisation</div>
+              <div class="contact-info-value">France</div>
+              <div class="contact-info-sub">Télétravail — clients partout</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding:1.5rem;border:1px solid rgba(124,58,237,.2);border-radius:12px;background:rgba(124,58,237,.04)">
+          <p style="font-weight:700;color:#f1f5f9;font-size:.875rem;margin-bottom:1rem">Ce que comprend le devis gratuit</p>
+          <ul class="check-list">
+            <li>Analyse de votre besoin en détail</li>
+            <li>Proposition technique adaptée</li>
+            <li>Estimation détaillée du coût</li>
+            <li>Délais de réalisation précis</li>
+            <li>Recommandations sans engagement</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:2rem">
+          <p style="font-family:var(--font-mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:.75rem">Ils m'ont fait confiance</p>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+            <div style="padding:.5rem 1rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:6px;font-size:.8rem;color:var(--text-muted)">Marie L. — E-commerce</div>
+            <div style="padding:.5rem 1rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:6px;font-size:.8rem;color:var(--text-muted)">Thomas R. — Site vitrine</div>
+            <div style="padding:.5rem 1rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:6px;font-size:.8rem;color:var(--text-muted)">Sophie M. — Webapp</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: FORM -->
+      <div class="reveal">
+        <div id="form-wrap">
+          <form id="contact-form" style="background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:2rem;display:flex;flex-direction:column;gap:1rem">
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label">Prénom *</label>
+                <input type="text" class="form-input" placeholder="Jean" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Nom *</label>
+                <input type="text" class="form-input" placeholder="Dupont" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email *</label>
+              <input type="email" class="form-input" placeholder="jean@exemple.fr" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Téléphone</label>
+              <input type="tel" class="form-input" placeholder="+33 6 00 00 00 00" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Type de projet *</label>
+              <select class="form-select" required>
+                <option value="">Sélectionnez votre type de projet</option>
+                <option value="simple">Site web simple (HTML/JS) — à partir de 299€</option>
+                <option value="vitrine">Site vitrine professionnel — à partir de 799€</option>
+                <option value="ecommerce">E-commerce — à partir de 1 490€</option>
+                <option value="webapp">Webapp / outil sur mesure — à partir de 2 500€</option>
+                <option value="autre">Autre / je ne sais pas encore</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Budget indicatif</label>
+              <select class="form-select">
+                <option value="">Sélectionnez...</option>
+                <option>Moins de 500€</option>
+                <option>500€ – 1 000€</option>
+                <option>1 000€ – 3 000€</option>
+                <option>3 000€ – 10 000€</option>
+                <option>Plus de 10 000€</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Délai souhaité</label>
+              <select class="form-select">
+                <option value="">Sélectionnez...</option>
+                <option>Dès que possible</option>
+                <option>Dans 1 mois</option>
+                <option>Dans 3 mois</option>
+                <option>Pas de contrainte</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Décrivez votre projet *</label>
+              <textarea class="form-textarea" rows="6" placeholder="Décrivez votre activité, vos objectifs, les fonctionnalités souhaitées, vos inspirations... Plus vous êtes précis, plus mon estimation sera juste." required></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-check">
+                <input type="checkbox" required />
+                <span>J'accepte que mes données soient utilisées pour répondre à ma demande de devis.</span>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submit-btn" style="height:52px">Envoyer ma demande de devis →</button>
+            <p style="font-size:.75rem;text-align:center">Devis gratuit · Sans engagement · Réponse sous 24h</p>
+          </form>
+        </div>
+
+        <div id="form-success" style="display:none;text-align:center;padding:4rem 2rem;background:var(--bg-card);border:1px solid rgba(124,58,237,.25);border-radius:16px">
+          <div style="font-size:3.5rem;margin-bottom:1rem">✅</div>
+          <h2 style="margin-bottom:.75rem;font-size:1.5rem">Demande reçue !</h2>
+          <p style="margin-bottom:2rem">Je vous réponds sous 24h ouvrées avec une proposition détaillée et adaptée à votre projet.</p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+            <button onclick="document.getElementById('form-success').style.display='none';document.getElementById('form-wrap').style.display='block'" class="btn btn-outline">Nouveau message</button>
+            <a href="/#portfolio" class="btn btn-ghost">Voir mon portfolio</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" style="margin-bottom:.75rem;display:inline-flex"><div class="nav-logo-icon">&gt;_</div>DEV.PRO</a>
+        <p>Développeur web full-stack spécialisé en solutions digitales sur mesure.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/#portfolio">Portfolio</a></li>
+          <li><a href="/a-propos/">À propos</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <a href="mailto:contact@exemple.fr" style="display:block;font-size:.85rem;color:#f1f5f9;font-family:var(--font-mono);margin-bottom:.75rem">contact@exemple.fr</a>
+        <a href="/contact/" style="font-size:.85rem;color:var(--primary-light)">Demander un devis gratuit →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 DEV.PRO — Tous droits réservés</span>
+      <span class="footer-status">STATUS: ONLINE</span>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="/assets/main.js"></script>
+<script type="module">
+const form = document.getElementById('contact-form');
+form?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const btn = document.getElementById('submit-btn');
+  btn.disabled = true;
+  btn.textContent = 'Envoi en cours...';
+  await new Promise(r => setTimeout(r, 900));
+  document.getElementById('form-wrap').style.display = 'none';
+  document.getElementById('form-success').style.display = 'block';
+});
+</script>
+</body>
+</html>

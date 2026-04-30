@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEV.PRO — Sites web &amp; solutions digitales sur mesure</title>
+  <meta name="description" content="Développeur web full-stack spécialisé en création de sites web, e-commerce, webapps et solutions digitales sur mesure. Devis gratuit sous 24h." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">&gt;_</div>
+      DEV.PRO
+    </a>
+    <div class="nav-links">
+      <a href="/" class="nav-link" data-nav>Accueil</a>
+      <a href="/services/" class="nav-link" data-nav>Services</a>
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="/a-propos/" class="nav-link" data-nav>À propos</a>
+      <a href="/contact/" class="nav-link" data-nav>Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="/contact/" class="nav-cta">Devis gratuit</a>
+      <a href="/admin/" class="nav-admin">🛡 Admin</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span class="toggle-icon">☰</span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="/" class="nav-mobile-link">Accueil</a>
+    <a href="/services/" class="nav-mobile-link">Services</a>
+    <a href="#portfolio" class="nav-mobile-link">Portfolio</a>
+    <a href="/a-propos/" class="nav-mobile-link">À propos</a>
+    <a href="/contact/" class="nav-mobile-link">Contact</a>
+    <a href="/contact/" class="nav-mobile-cta">Demander un devis gratuit</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <span class="status-online">
+          <span class="status-dot"></span>DISPONIBLE POUR DE NOUVEAUX PROJETS
+        </span>
+      </div>
+      <h1>Des sites web et solutions digitales <span class="gradient-text">conçus pour faire grandir votre activité.</span></h1>
+      <p class="hero-sub">Sites web simples, e-commerce, webapps et outils sur mesure pour automatiser et développer votre business — livrés avec soin, du design à la mise en ligne.</p>
+      <div class="hero-ctas">
+        <a href="/contact/" class="btn btn-primary btn-lg">Demander un devis →</a>
+        <a href="#services" class="btn btn-outline btn-lg">Voir les services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-value" id="stat-total">—</div>
+        <div class="stat-label">Projets réalisés</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="stat-featured">—</div>
+        <div class="stat-label">Projets vedettes</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="stat-categories">—</div>
+        <div class="stat-label">Domaines couverts</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">100%</div>
+        <div class="stat-label">Clients satisfaits</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label">Mes Services</span>
+      <h2>Ce que je construis pour vous</h2>
+      <p>Un site web n'est pas qu'une vitrine — c'est un outil business. Chaque projet a ses besoins spécifiques et son budget adapté.</p>
+    </div>
+    <div class="grid-2" style="gap:1.5rem">
+      <div class="card reveal">
+        <div class="card-icon">💻</div>
+        <span class="label" style="margin-bottom:.5rem;display:block">Artisans, indépendants, associations</span>
+        <h3>Site Web Simple (HTML/JS)</h3>
+        <p>Un site rapide, léger et optimisé pour le référencement. Page de présentation, portfolio ou blog — livré propre et fonctionnel.</p>
+        <div style="margin-top:1.25rem;padding:.75rem;background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.15);border-radius:8px;font-size:.8rem">
+          ✓ En ligne en quelques jours, sans coût superflu.
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">🌐</div>
+        <span class="label" style="margin-bottom:.5rem;display:block">PME, artisans, professions libérales</span>
+        <h3>Site Vitrine Professionnel</h3>
+        <p>Site multi-pages avec design sur mesure, formulaire de contact, Google Maps, galerie photos et intégration réseaux sociaux.</p>
+        <div style="margin-top:1.25rem;padding:.75rem;background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.15);border-radius:8px;font-size:.8rem">
+          ✓ Une image professionnelle qui rassure vos clients.
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">🛒</div>
+        <span class="label" style="margin-bottom:.5rem;display:block">Boutiques, créateurs, revendeurs</span>
+        <h3>E-commerce</h3>
+        <p>Boutique en ligne complète avec paiement sécurisé (Stripe, crypto), gestion des stocks, paniers et tableaux de bord.</p>
+        <div style="margin-top:1.25rem;padding:.75rem;background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.15);border-radius:8px;font-size:.8rem">
+          ✓ Vendez 24h/24, 7j/7, sans intermédiaire.
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">🔧</div>
+        <span class="label" style="margin-bottom:.5rem;display:block">Entreprises, startups, indépendants ambitieux</span>
+        <h3>Webapps &amp; Solutions Sur Mesure</h3>
+        <p>CRM, logistique, suivi GPS, streaming live, chat temps réel, paiement crypto — tout ce dont votre activité a besoin.</p>
+        <div style="margin-top:1.25rem;padding:.75rem;background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.15);border-radius:8px;font-size:.8rem">
+          ✓ Un outil qui s'adapte à votre métier, pas l'inverse.
+        </div>
+      </div>
+    </div>
+    <div class="reveal" style="text-align:center;margin-top:2.5rem">
+      <a href="/services/" class="btn btn-outline">Voir le détail de chaque service →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section section-alt" id="portfolio">
+  <div class="container">
+    <div class="section-header">
+      <div class="reveal">
+        <span class="label" style="display:block;margin-bottom:.5rem">Portfolio</span>
+        <h2>Projets réalisés</h2>
+        <p style="margin-top:.5rem">Des applications et sites web déployés en production.</p>
+      </div>
+      <div class="filter-bar reveal" style="margin-top:1.5rem">
+        <button class="filter-btn active" data-category="all">Tous</button>
+        <button class="filter-btn" data-category="E-commerce">E-commerce</button>
+        <button class="filter-btn" data-category="Logistique / GPS">Logistique / GPS</button>
+        <button class="filter-btn" data-category="Streaming / Live">Streaming</button>
+        <button class="filter-btn" data-category="Crypto / Blockchain">Crypto</button>
+        <button class="filter-btn" data-category="Chat / Temps reel">Chat</button>
+        <button class="filter-btn" data-category="Landing Page">Landing</button>
+      </div>
+    </div>
+    <div class="grid-3" id="projects-grid" style="align-items:start">
+      <div class="skeleton" style="height:360px;border-radius:12px"></div>
+      <div class="skeleton" style="height:360px;border-radius:12px"></div>
+      <div class="skeleton" style="height:360px;border-radius:12px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI MOI -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label">Pourquoi moi</span>
+      <h2>Un développeur, pas une agence anonyme</h2>
+      <p>Vous travaillez directement avec la personne qui code votre projet. Pas d'intermédiaire, pas de surprise.</p>
+    </div>
+    <div class="grid-3" style="gap:1.25rem">
+      <div class="card reveal"><div class="card-icon">💡</div><h3>Développement sur mesure</h3><p>Chaque projet est unique. Je construis ce dont vous avez besoin, pas un template générique.</p></div>
+      <div class="card reveal"><div class="card-icon">⚡</div><h3>Performance et rapidité</h3><p>Sites optimisés, temps de chargement courts, expérience fluide sur tous les appareils.</p></div>
+      <div class="card reveal"><div class="card-icon">🔍</div><h3>SEO optimisé</h3><p>Structure technique propre, balises adaptées, score Lighthouse élevé pour être trouvé sur Google.</p></div>
+      <div class="card reveal"><div class="card-icon">🎨</div><h3>Design moderne</h3><p>Interfaces élégantes et intuitives qui inspirent confiance et convertissent les visiteurs.</p></div>
+      <div class="card reveal"><div class="card-icon">📈</div><h3>Solutions évolutives</h3><p>Votre site peut évoluer avec votre activité : nouvelles fonctionnalités, intégrations, scaling.</p></div>
+      <div class="card reveal"><div class="card-icon">🤝</div><h3>Suivi &amp; support</h3><p>Je reste disponible après la livraison. Pas de livraison et disparition : un vrai partenariat.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSUS -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label">Comment ça marche</span>
+      <h2>Un processus clair, du brief à la mise en ligne</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <div class="process-step-icon">📋</div>
+        <div class="process-step-num">01</div>
+        <h3>Analyse du besoin</h3>
+        <p>On échange pour comprendre votre activité, vos objectifs et ce que vous attendez de votre site. Aucun projet ne ressemble à un autre.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-step-icon">✏️</div>
+        <div class="process-step-num">02</div>
+        <h3>Design &amp; maquette</h3>
+        <p>Je conçois une maquette visuelle selon votre identité. Vous validez avant que la moindre ligne de code ne soit écrite.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-step-icon">⌨️</div>
+        <div class="process-step-num">03</div>
+        <h3>Développement</h3>
+        <p>Je code votre site proprement, de façon structurée et performante. Vous recevez des mises à jour régulières.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-step-icon">🚀</div>
+        <div class="process-step-num">04</div>
+        <h3>Livraison &amp; support</h3>
+        <p>Mise en ligne, transfert des accès, formation à l'administration. Et je reste disponible pour la suite.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label">Témoignages</span>
+      <h2>Ce que disent mes clients</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Mon site e-commerce a été livré en 10 jours. Depuis, mes ventes en ligne ont dépassé celles de ma boutique physique. Je recommande sans hésitation."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">ML</div>
+          <div><div class="testimonial-name">Marie L.</div><div class="testimonial-role">Gérante de boutique</div></div>
+        </div>
+      </div>
+      <div class="card testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Site vitrine professionnel, rapide et bien référencé. J'ai reçu des demandes de clients dès la première semaine. Un investissement qui s'est vite rentabilisé."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">TR</div>
+          <div><div class="testimonial-name">Thomas R.</div><div class="testimonial-role">Consultant indépendant</div></div>
+        </div>
+      </div>
+      <div class="card testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Webapp sur mesure livrée dans les délais, avec toutes les fonctionnalités demandées. Équipe réactive et de bon conseil. On continue à travailler ensemble."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SM</div>
+          <div><div class="testimonial-name">Sophie M.</div><div class="testimonial-role">Directrice startup</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT RAPIDE -->
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start" class="contact-section-inner">
+      <div class="reveal">
+        <span class="label" style="display:block;margin-bottom:.75rem">Contact</span>
+        <h2>Parlons de votre projet</h2>
+        <p style="margin:1rem 0 2rem">Décrivez votre projet et je vous réponds sous 24h avec une estimation gratuite et sans engagement.</p>
+        <div class="contact-info-card" style="margin-bottom:1rem">
+          <div class="contact-info-icon">✉️</div>
+          <div>
+            <div class="contact-info-label">Email</div>
+            <a href="mailto:contact@exemple.fr" class="contact-info-value" style="display:block">contact@exemple.fr</a>
+            <div class="contact-info-sub">Réponse sous 24h ouvrées</div>
+          </div>
+        </div>
+        <div style="margin-top:1.5rem;padding:1.25rem;border:1px solid rgba(124,58,237,.2);border-radius:12px;background:rgba(124,58,237,.04)">
+          <p style="font-weight:700;color:#f1f5f9;font-size:.875rem;margin-bottom:.75rem">Devis gratuit inclus</p>
+          <ul class="check-list">
+            <li>Analyse de votre besoin</li>
+            <li>Proposition technique adaptée</li>
+            <li>Estimation du coût et des délais</li>
+            <li>Sans engagement de votre part</li>
+          </ul>
+        </div>
+      </div>
+      <div class="reveal">
+        <div id="contact-form-wrap">
+          <form id="contact-form" style="display:flex;flex-direction:column;gap:1rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:16px">
+            <div class="form-group">
+              <label class="form-label">Votre nom *</label>
+              <input type="text" class="form-input" placeholder="Jean Dupont" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email *</label>
+              <input type="email" class="form-input" placeholder="jean@exemple.fr" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Type de projet</label>
+              <select class="form-select">
+                <option value="">Sélectionnez...</option>
+                <option>Site web simple (HTML)</option>
+                <option>Site vitrine professionnel</option>
+                <option>E-commerce</option>
+                <option>Webapp / outil sur mesure</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Votre projet *</label>
+              <textarea class="form-textarea" placeholder="Décrivez votre projet, vos besoins, votre budget indicatif..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" style="height:52px">Envoyer ma demande →</button>
+          </form>
+        </div>
+        <div id="contact-success" style="display:none;text-align:center;padding:3rem 2rem;border:1px solid rgba(124,58,237,.25);border-radius:16px;background:rgba(124,58,237,.04)">
+          <div style="font-size:3rem;margin-bottom:1rem">✅</div>
+          <h3 style="margin-bottom:.5rem">Message envoyé !</h3>
+          <p>Je vous réponds sous 24h ouvrées avec une proposition adaptée à votre projet.</p>
+          <button onclick="document.getElementById('contact-success').style.display='none';document.getElementById('contact-form-wrap').style.display='block'" class="btn btn-outline" style="margin-top:1.5rem">Envoyer un autre message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section" style="text-align:center">
+  <div class="container reveal">
+    <div style="font-size:2.5rem;margin-bottom:1rem">🚀</div>
+    <h2 style="margin-bottom:1rem">Prêt à développer votre activité en ligne ?</h2>
+    <p style="max-width:500px;margin:0 auto 2.5rem">Obtenez un devis gratuit et sans engagement. Je vous réponds sous 24h.</p>
+    <a href="/contact/" class="btn btn-primary btn-lg">Demander un devis gratuit →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" style="margin-bottom:.75rem;display:inline-flex">
+          <div class="nav-logo-icon">&gt;_</div>
+          DEV.PRO
+        </a>
+        <p>Développeur web full-stack spécialisé en solutions digitales sur mesure — du site vitrine à la webapp complexe.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/#portfolio">Portfolio</a></li>
+          <li><a href="/a-propos/">À propos</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <a href="mailto:contact@exemple.fr" style="display:block;font-size:.85rem;color:#f1f5f9;font-family:var(--font-mono);margin-bottom:.75rem">contact@exemple.fr</a>
+        <a href="/contact/" style="font-size:.85rem;color:var(--primary-light)">Demander un devis gratuit →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 DEV.PRO — Tous droits réservés</span>
+      <span class="footer-status">STATUS: ONLINE</span>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="/assets/main.js"></script>
+<script type="module" src="/assets/home.js"></script>
+</body>
+</html>

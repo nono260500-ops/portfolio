@@ -1,0 +1,46 @@
+nono@macbook-pro-de-arnaud-1 Portfolio-Builder % pnpm run deploy:build
+
+
+
+> workspace@0.0.0 deploy:build /Users/nono/Bureau - Local/Projets/Portfolio-Builder
+> BASE_PATH=/ pnpm --filter @workspace/portfolio build && pnpm --filter @workspace/api-server run build
+
+
+> @workspace/portfolio@0.0.0 build /Users/nono/Bureau - Local/Projets/Portfolio-Builder/artifacts/portfolio
+> vite build --config vite.config.ts
+
+vite v7.3.2 building client environment for production...
+✓ 16 modules transformed.
+dist/public/admin/index.html             7.80 kB │ gzip: 2.40 kB
+dist/public/project/index.html          10.66 kB │ gzip: 2.81 kB
+dist/public/a-propos/index.html         10.75 kB │ gzip: 3.14 kB
+dist/public/contact/index.html          11.45 kB │ gzip: 3.14 kB
+dist/public/services/index.html         15.44 kB │ gzip: 3.88 kB
+dist/public/index.html                  19.12 kB │ gzip: 5.24 kB
+dist/public/assets/main-B-eQuJ8l.css    20.72 kB │ gzip: 4.55 kB
+dist/public/assets/contact-DPf-Y_Rj.js   0.39 kB │ gzip: 0.26 kB
+dist/public/assets/main-DrQsHheL.js      1.72 kB │ gzip: 0.88 kB
+dist/public/assets/project-Q5kxb-N8.js   2.14 kB │ gzip: 1.04 kB
+dist/public/assets/main-8tB1eZNJ.js      3.22 kB │ gzip: 1.50 kB
+dist/public/assets/admin-CQJcO3z2.js     5.19 kB │ gzip: 1.79 kB
+✓ built in 78ms
+
+> @workspace/api-server@0.0.0 build /Users/nono/Bureau - Local/Projets/Portfolio-Builder/artifacts/api-server
+> node ./build.mjs
+
+
+  dist/index.mjs                       2.2mb ⚠️
+  dist/pino-worker.mjs               153.4kb
+  dist/pino-file.mjs                 142.1kb
+  dist/pino-pretty.mjs               114.6kb
+  dist/thread-stream-worker.mjs        7.3kb
+  dist/index.mjs.map                   3.7mb
+  dist/pino-worker.mjs.map           256.9kb
+  dist/pino-file.mjs.map             229.1kb
+  dist/pino-pretty.mjs.map           203.9kb
+  dist/thread-stream-worker.mjs.map   12.0kb
+
+⚡ Done in 96ms
+Copying frontend files to dist/public/...
+Frontend files copied.
+nono@macbook-pro-de-arnaud-1 Portfolio-Builder % 

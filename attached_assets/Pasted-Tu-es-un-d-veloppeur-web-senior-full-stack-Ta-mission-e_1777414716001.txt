@@ -1,0 +1,167 @@
+Tu es un développeur web senior full-stack.
+
+Ta mission est de créer un site web professionnel complet pour une activité de développement web et solutions digitales.
+
+## 🎯 Objectif du site
+Créer un site vitrine moderne qui présente et vend des services de création de :
+- sites web simples (HTML / CSS / JS)
+- sites vitrines professionnels
+- e-commerce
+- webapps / outils sur mesure
+- solutions digitales (automatisation, gestion, logistique, CRM)
+
+Le site doit être orienté conversion (obtenir des demandes de devis).
+
+---
+
+## 🧱 Stack technique
+- Frontend : HTML5, CSS3, JavaScript vanilla (ou framework léger si nécessaire)
+- Design responsive (mobile-first)
+- Code propre et structuré
+- Pas de dépendances inutiles
+- Animations légères possibles (scroll, hover)
+- SEO basique intégré (meta tags, structure H1/H2)
+
+---
+
+## 🎨 Style / design
+- Style moderne, minimaliste et professionnel
+- Couleurs : fond clair ou sombre sobre + couleur accent (bleu ou violet conseillé)
+- Typographie lisible et moderne
+- Sections bien espacées
+- Look “agence digitale premium”
+
+---
+
+## 📄 Pages à créer
+
+### 1. Accueil (landing page principale)
+Doit contenir :
+
+#### Hero section
+Titre :
+"Des sites web et solutions digitales conçus pour faire grandir votre activité"
+
+Sous-titre :
+"Sites web simples, e-commerce, webapps et outils sur mesure pour automatiser et développer votre business"
+
+CTA :
+- Demander un devis
+- Voir les services
+
+---
+
+#### Section services
+4 blocs :
+
+1. Sites web simples (HTML)
+2. Sites vitrines
+3. E-commerce
+4. Webapps & solutions sur mesure
+
+Chaque bloc doit expliquer :
+- ce que c’est
+- pour qui
+- bénéfice principal
+
+---
+
+#### Section “Pourquoi moi”
+Points :
+- Développement sur mesure
+- Performance et rapidité
+- SEO optimisé
+- Design moderne
+- Solutions évolutives
+
+---
+
+#### Section processus
+Étapes :
+1. Analyse du besoin
+2. Design / maquette
+3. Développement
+4. Livraison + support
+
+---
+
+#### Section contact
+- Formulaire (nom, email, message)
+- bouton envoi
+- email affiché
+
+---
+
+### 2. Page Services (optionnelle mais recommandée)
+Détail complet des services :
+- site HTML simple
+- site vitrine
+- e-commerce
+- webapps
+- automatisation / outils métier
+
+---
+
+### 3. Page À propos
+Texte professionnel :
+- développeur web
+- création de solutions digitales
+- approche sur mesure
+- orienté résultats
+
+---
+
+### 4. Page Contact
+- formulaire
+- coordonnées
+- call to action clair
+
+---
+
+## ⚙️ Fonctionnalités techniques
+- navigation fluide (navbar sticky)
+- scroll smooth
+- responsive mobile/tablette/desktop
+- formulaire fonctionnel (front-end suffisant si backend absent)
+- animations légères (fade-in on scroll)
+- structure propre en composants si possible
+
+---
+
+## 🧠 Contenu important à intégrer
+
+Le site doit expliquer clairement :
+
+- Un site web n’est pas seulement une vitrine, c’est un outil business
+- Chaque projet est différent (comme une voiture : besoin spécifique)
+- Les prix dépendent des fonctionnalités :
+  - site simple
+  - site avancé
+  - e-commerce
+  - webapp sur mesure
+
+---
+
+## 💬 Ton du site
+- professionnel
+- clair
+- pas trop technique
+- orienté client (bénéfices, pas technologie)
+
+---
+
+## 📱 Responsive obligatoire
+Le site doit être parfait sur mobile.
+
+---
+
+## 🧾 Bonus (si possible)
+- section témoignages (placeholder)
+- section projets / portfolio (même fictif au début)
+- SEO de base (title, description, keywords)
+- favicon
+
+---
+
+## 🏁 Résultat attendu
+Un site complet prêt à être mis en ligne, moderne, propre, et orienté acquisition de clients pour des services de développement web et solutions digitales.

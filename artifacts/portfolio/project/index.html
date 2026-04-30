@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet — DEV.PRO</title>
+  <meta name="description" content="Détail du projet." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/style.css" />
+  <style>
+    .project-detail-hero {
+      padding: 7rem 0 3rem;
+      background: linear-gradient(180deg, rgba(124,58,237,0.08) 0%, transparent 100%);
+    }
+    .project-detail-back {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      color: var(--muted);
+      font-size: .875rem;
+      text-decoration: none;
+      margin-bottom: 2rem;
+      transition: color .2s;
+    }
+    .project-detail-back:hover { color: var(--accent); }
+    .project-detail-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .project-detail-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.1;
+      flex: 1;
+    }
+    .project-detail-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-bottom: 2rem;
+      align-items: center;
+    }
+    .project-detail-category {
+      font-family: var(--mono);
+      font-size: .8rem;
+      color: var(--accent);
+      background: rgba(124,58,237,.12);
+      padding: .3rem .8rem;
+      border-radius: 99px;
+      border: 1px solid rgba(124,58,237,.25);
+    }
+    .project-detail-image {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+    .project-detail-image-placeholder {
+      width: 100%;
+      height: 320px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      margin-bottom: 2.5rem;
+    }
+    .project-detail-body {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .project-detail-body { grid-template-columns: 1fr; }
+      .project-detail-sidebar { order: -1; }
+    }
+    .project-detail-description {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+    .project-detail-long-desc {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      white-space: pre-line;
+    }
+    .project-detail-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-top: 2rem;
+    }
+    .project-detail-sidebar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      position: sticky;
+      top: 6rem;
+    }
+    .project-detail-sidebar h3 {
+      font-size: .8rem;
+      font-family: var(--mono);
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 1rem;
+    }
+    .project-detail-sidebar .btn {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: .75rem;
+      display: flex;
+    }
+    .project-detail-sidebar .btn:last-child { margin-bottom: 0; }
+    .project-detail-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+    .project-detail-info-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: .875rem;
+      padding: .4rem 0;
+      color: var(--text-secondary);
+    }
+    .project-detail-info-row span:first-child { color: var(--muted); }
+    .project-detail-cta {
+      padding: 4rem 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      margin-top: 4rem;
+    }
+    .project-detail-cta h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: .75rem; }
+    .project-detail-cta p { color: var(--text-secondary); margin-bottom: 2rem; }
+    .skeleton-block {
+      background: var(--surface);
+      border-radius: .5rem;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo"><div class="nav-logo-icon">&gt;_</div>DEV.PRO</a>
+    <div class="nav-links">
+      <a href="/" class="nav-link" data-nav>Accueil</a>
+      <a href="/services/" class="nav-link" data-nav>Services</a>
+      <a href="/#portfolio" class="nav-link">Portfolio</a>
+      <a href="/a-propos/" class="nav-link" data-nav>À propos</a>
+      <a href="/contact/" class="nav-link" data-nav>Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="/contact/" class="nav-cta">Devis gratuit</a>
+      <a href="/admin/" class="nav-admin">🛡 Admin</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle"><span class="toggle-icon">☰</span></button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="/" class="nav-mobile-link">Accueil</a>
+    <a href="/services/" class="nav-mobile-link">Services</a>
+    <a href="/#portfolio" class="nav-mobile-link">Portfolio</a>
+    <a href="/a-propos/" class="nav-mobile-link">À propos</a>
+    <a href="/contact/" class="nav-mobile-link">Contact</a>
+    <a href="/contact/" class="nav-mobile-cta">Demander un devis gratuit</a>
+  </div>
+</nav>
+
+<!-- CONTENU -->
+<main id="project-main">
+
+  <!-- ÉTAT CHARGEMENT -->
+  <section class="project-detail-hero" id="state-loading">
+    <div class="container" style="max-width:900px">
+      <div class="skeleton-block" style="width:120px;height:1.2rem;margin-bottom:2rem"></div>
+      <div class="skeleton-block" style="width:60%;height:3rem;margin-bottom:1rem"></div>
+      <div class="skeleton-block" style="width:40%;height:1.5rem;margin-bottom:2rem"></div>
+      <div class="skeleton-block" style="width:100%;height:320px;border-radius:1rem;margin-bottom:2.5rem"></div>
+      <div style="display:grid;grid-template-columns:1fr 300px;gap:3rem">
+        <div>
+          <div class="skeleton-block" style="height:1rem;margin-bottom:.75rem"></div>
+          <div class="skeleton-block" style="height:1rem;margin-bottom:.75rem;width:90%"></div>
+          <div class="skeleton-block" style="height:1rem;margin-bottom:.75rem;width:80%"></div>
+          <div class="skeleton-block" style="height:1rem;margin-bottom:.75rem"></div>
+          <div class="skeleton-block" style="height:1rem;width:70%"></div>
+        </div>
+        <div class="skeleton-block" style="height:200px;border-radius:1rem"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÉTAT ERREUR -->
+  <section class="project-detail-hero" id="state-error" style="display:none">
+    <div class="container" style="max-width:900px;text-align:center;padding:5rem 0">
+      <div style="font-size:4rem;margin-bottom:1.5rem">🔍</div>
+      <h1 style="font-size:2rem;font-weight:700;margin-bottom:1rem">Projet introuvable</h1>
+      <p style="color:var(--text-secondary);margin-bottom:2rem">Ce projet n'existe pas ou a été supprimé.</p>
+      <a href="/#portfolio" class="btn btn-primary">← Retour au portfolio</a>
+    </div>
+  </section>
+
+  <!-- CONTENU DU PROJET -->
+  <section class="project-detail-hero" id="state-content" style="display:none">
+    <div class="container" style="max-width:900px">
+
+      <a href="/#portfolio" class="project-detail-back">← Retour au portfolio</a>
+
+      <div class="project-detail-header">
+        <h1 class="project-detail-title" id="proj-title">—</h1>
+        <span id="proj-featured" style="display:none" class="badge badge-primary">⭐ Vedette</span>
+      </div>
+
+      <div class="project-detail-meta">
+        <span class="project-detail-category" id="proj-category">—</span>
+        <div id="proj-tags" class="project-detail-tags" style="margin-top:0"></div>
+      </div>
+
+      <div id="proj-image-wrap"></div>
+
+      <div class="project-detail-body">
+        <div>
+          <p class="project-detail-description" id="proj-desc">—</p>
+          <div class="project-detail-long-desc" id="proj-long-desc"></div>
+        </div>
+
+        <aside class="project-detail-sidebar">
+          <h3>Liens</h3>
+          <div id="proj-links"></div>
+
+          <hr class="project-detail-divider">
+
+          <h3>Infos</h3>
+          <div class="project-detail-info-row">
+            <span>Catégorie</span>
+            <span id="proj-info-category">—</span>
+          </div>
+          <div class="project-detail-info-row" id="proj-info-date-row">
+            <span>Ajouté le</span>
+            <span id="proj-info-date">—</span>
+          </div>
+
+          <hr class="project-detail-divider">
+
+          <a href="/contact/" class="btn btn-primary">Projet similaire ?</a>
+        </aside>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- CTA bas de page -->
+<section class="project-detail-cta" id="proj-cta" style="display:none">
+  <div class="container">
+    <h2>Un projet similaire en tête ?</h2>
+    <p>Discutons de vos besoins et trouvons la meilleure solution ensemble.</p>
+    <a href="/contact/" class="btn btn-primary btn-lg">Demander un devis gratuit →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="nav-logo" style="margin-bottom:.75rem;display:inline-flex"><div class="nav-logo-icon">&gt;_</div>DEV.PRO</a>
+      <p class="footer-desc">Développeur web freelance spécialisé dans la création d'applications performantes et modernes.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <div class="footer-col-title">Navigation</div>
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/#portfolio">Portfolio</a></li>
+          <li><a href="/a-propos/">À propos</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2025 DEV.PRO. Tous droits réservés.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/main.js" type="module"></script>
+<script src="/assets/project.js" type="module"></script>
+</body>
+</html>

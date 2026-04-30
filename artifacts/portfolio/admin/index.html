@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — DEV.PRO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/style.css" />
+  <style>
+    .admin-header { padding: 2rem 0; border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
+    .admin-toolbar { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .admin-toolbar h2 { flex: 1; font-size: 1.25rem; }
+    @media (max-width: 600px) { .admin-toolbar { flex-direction: column; align-items: stretch; } }
+    .contact-section-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+    @media (max-width: 768px) { .contact-section-inner { grid-template-columns: 1fr; gap: 2rem; } }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo"><div class="nav-logo-icon">&gt;_</div>DEV.PRO</a>
+    <div class="nav-links">
+      <a href="/" class="nav-link">Accueil</a>
+      <a href="/services/" class="nav-link">Services</a>
+      <a href="/#portfolio" class="nav-link">Portfolio</a>
+      <a href="/a-propos/" class="nav-link">À propos</a>
+      <a href="/contact/" class="nav-link">Contact</a>
+    </div>
+    <div class="nav-right">
+      <span style="font-family:var(--font-mono);font-size:.75rem;color:var(--primary-light);padding:.3rem .8rem;border:1px solid rgba(124,58,237,.3);border-radius:999px">🛡 ADMIN</span>
+    </div>
+    <button class="nav-toggle" id="nav-toggle"><span class="toggle-icon">☰</span></button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="/" class="nav-mobile-link">Accueil</a>
+    <a href="/services/" class="nav-mobile-link">Services</a>
+    <a href="/#portfolio" class="nav-mobile-link">Portfolio</a>
+    <a href="/a-propos/" class="nav-mobile-link">À propos</a>
+    <a href="/contact/" class="nav-mobile-link">Contact</a>
+  </div>
+</nav>
+
+<!-- ADMIN CONTENT -->
+<section style="padding:2rem 0 5rem;min-height:80vh">
+  <div class="container">
+    <!-- HEADER -->
+    <div class="admin-header">
+      <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
+        <div>
+          <span class="label" style="display:block;margin-bottom:.25rem">Interface d'administration</span>
+          <h1 style="font-size:1.75rem">Gestion des projets</h1>
+        </div>
+        <div style="margin-left:auto">
+          <button class="btn btn-primary" onclick="openCreate()">+ Nouveau projet</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOOLBAR -->
+    <div class="admin-toolbar">
+      <h2 id="projects-count" style="color:var(--text-muted);font-size:1rem;font-weight:500">Chargement...</h2>
+      <input type="text" id="search" class="form-input" placeholder="Rechercher par titre, catégorie, tag..." style="max-width:320px" />
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Titre</th>
+            <th>Catégorie</th>
+            <th>Tags</th>
+            <th>Vedette</th>
+            <th>Statut</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="projects-table-body">
+          <tr><td colspan="6" style="text-align:center;padding:3rem;color:var(--text-muted)">Chargement des projets...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="modal-title" id="modal-title">Projet</span>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <form class="modal-form" id="project-form">
+      <input type="hidden" id="form-id" />
+      <div class="form-group">
+        <label class="form-label">Titre *</label>
+        <input type="text" id="form-title" class="form-input" placeholder="Nom du projet" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Description courte *</label>
+        <textarea id="form-description" class="form-textarea" rows="2" placeholder="Brève description pour les cartes..." required></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Description longue</label>
+        <textarea id="form-long-description" class="form-textarea" rows="4" placeholder="Description détaillée pour la page projet..."></textarea>
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="form-label">Catégorie *</label>
+          <select id="form-category" class="form-select" required>
+            <option value="">Sélectionnez...</option>
+            <option value="E-commerce">E-commerce</option>
+            <option value="Logistique / GPS">Logistique / GPS</option>
+            <option value="Streaming / Live">Streaming / Live</option>
+            <option value="Crypto / Blockchain">Crypto / Blockchain</option>
+            <option value="Outils Metier">Outils Métier</option>
+            <option value="Chat / Temps reel">Chat / Temps réel</option>
+            <option value="Landing Page">Landing Page</option>
+            <option value="Application Web">Application Web</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Ordre d'affichage</label>
+          <input type="number" id="form-order" class="form-input" value="0" min="0" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Tags (séparés par des virgules)</label>
+        <input type="text" id="form-tags" class="form-input" placeholder="React, Node.js, PostgreSQL" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">URL de l'image</label>
+        <input type="url" id="form-image-url" class="form-input" placeholder="https://..." />
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="form-label">URL du projet</label>
+          <input type="url" id="form-project-url" class="form-input" placeholder="https://..." />
+        </div>
+        <div class="form-group">
+          <label class="form-label">URL GitHub</label>
+          <input type="url" id="form-github-url" class="form-input" placeholder="https://github.com/..." />
+        </div>
+      </div>
+      <div style="display:flex;gap:1.5rem">
+        <label class="form-check">
+          <input type="checkbox" id="form-featured" />
+          <span>Projet vedette</span>
+        </label>
+        <label class="form-check">
+          <input type="checkbox" id="form-published" checked />
+          <span>Publié</span>
+        </label>
+      </div>
+      <div class="modal-actions">
+        <button type="submit" id="form-submit" class="btn btn-primary">Enregistrer</button>
+        <button type="button" class="btn btn-outline" onclick="closeModal()">Annuler</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="footer" style="margin-top:0">
+  <div class="container">
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 DEV.PRO — Interface d'administration</span>
+      <a href="/" style="font-size:.8rem;color:var(--text-muted)">← Retour au site</a>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="/assets/main.js"></script>
+<script type="module" src="/assets/admin.js"></script>
+<script type="module">
+const tbody = document.getElementById('projects-table-body');
+const countEl = document.getElementById('projects-count');
+new MutationObserver(() => {
+  const rows = tbody?.querySelectorAll('tr');
+  if (rows && rows.length > 0 && rows[0].cells?.length > 1) {
+    countEl.textContent = `${rows.length} projet${rows.length > 1 ? 's' : ''}`;
+  }
+}).observe(tbody, { childList: true });
+</script>
+</body>
+</html>
