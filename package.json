@@ -10,7 +10,7 @@
     "build": "pnpm run typecheck && pnpm -r --if-present run build",
     "typecheck:libs": "tsc --build",
     "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck",
-    "deploy:build": "pnpm run typecheck:libs && BASE_PATH=/ pnpm --filter @workspace/portfolio build && pnpm --filter @workspace/api-server run build",
+    "deploy:build": "pnpm run typecheck:libs && BASE_PATH=/ pnpm --filter @workspace/portfolio build && pnpm --filter @workspace/api-server run build && rm -f tsconfig.json artifacts/api-server/tsconfig.json",
     "deploy:start": "cd artifacts/api-server && NODE_ENV=production node --enable-source-maps ./dist/index.mjs"
   },
   "private": true,
