@@ -1,7 +1,7 @@
 {
   "buildCommand": "pnpm install && pnpm -w run deploy:build",
   "functions": {
-    "api/index.js": {
+    "api/index.mjs": {
       "includeFiles": "artifacts/api-server/dist/**",
       "maxDuration": 30
     }
