@@ -1,8 +1,8 @@
 /* ===== DESIGN TOKENS ===== */
 :root {
-  --bg: #08080f;
-  --bg-card: #0f0f1c;
-  --bg-card-hover: #14142a;
+  --bg: #14142b;
+  --bg-card: #1c1c36;
+  --bg-card-hover: #252544;
   --primary: #7c3aed;
   --primary-hover: #6d28d9;
   --primary-light: #8b5cf6;
@@ -106,7 +106,7 @@ section { position: relative; z-index: 1; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(8,8,15,0.85);
+  background: rgba(20,20,43,0.85);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
@@ -178,7 +178,7 @@ section { position: relative; z-index: 1; }
   gap: 0.25rem;
   padding: 1rem 1.5rem 1.5rem;
   border-top: 1px solid var(--border);
-  background: rgba(8,8,15,0.95);
+  background: rgba(20,20,43,0.95);
 }
 .nav-mobile.open { display: flex; }
 .nav-mobile-link {
@@ -606,7 +606,7 @@ tr:hover td { background: rgba(255,255,255,0.02); }
 /* ===== FOOTER ===== */
 .footer {
   border-top: 1px solid var(--border);
-  background: rgba(8,8,15,0.85);
+  background: rgba(20,20,43,0.85);
   backdrop-filter: blur(12px);
   padding: 3rem 0 2rem;
   position: relative; z-index: 1;
