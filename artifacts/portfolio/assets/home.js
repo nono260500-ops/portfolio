@@ -30,7 +30,7 @@ function renderProjects(projects) {
     return;
   }
   grid.innerHTML = projects.map((p, i) => `
-    <a href="/project/?id=${p.id}" class="project-card reveal" style="transition-delay:${i*0.07}s">
+    <div class="project-card reveal" data-href="/project/?id=${p.id}" style="transition-delay:${i*0.07}s">
       <div class="project-card-img">
         ${p.imageUrl
           ? `<img src="${p.imageUrl}" alt="${p.title}" loading="lazy">`
@@ -43,12 +43,19 @@ function renderProjects(projects) {
         <div class="project-card-desc">${p.description}</div>
         <div class="project-card-tags">${(p.tags || []).slice(0, 4).map(t => `<span class="tag">${t}</span>`).join('')}</div>
         <div class="project-card-links">
-          <span class="btn btn-outline btn-sm">Voir le détail →</span>
+          <a href="/project/?id=${p.id}" class="btn btn-outline btn-sm">Voir le détail →</a>
           ${p.projectUrl ? `<a href="${p.projectUrl}" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" onclick="event.stopPropagation()">Site ↗</a>` : ''}
         </div>
       </div>
-    </a>
+    </div>
   `).join('');
+  // Make whole card clickable (but inner links keep their own behavior)
+  grid.querySelectorAll('.project-card[data-href]').forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return;
+      window.location.href = card.dataset.href;
+    });
+  });
   // Re-observe new cards
   grid.querySelectorAll('.reveal').forEach(el => {
     if (window._revealObserver) window._revealObserver.observe(el);

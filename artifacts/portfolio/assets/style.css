@@ -353,6 +353,7 @@ section { position: relative; z-index: 1; }
   overflow: hidden;
   transition: border-color 0.25s, transform 0.25s;
   display: flex; flex-direction: column;
+  cursor: pointer;
 }
 .project-card:hover { border-color: var(--border-hover); transform: translateY(-4px); }
 .project-card-img {
